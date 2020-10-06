@@ -54,16 +54,12 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Taco Cat</h1>
+                <p class="lead">A Javascript Coding Challenge</p>
+                <ul class="list-unstyled">
+                    <li>This site will accpet a string input from the user and reverse it.</li>
+                    <li>It will then compare the reversed string to the original and alert the user whether or not the string is a palindrome.</li>
+                </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <input type="text" id="reverseThis" />
-            </div>
-            <div class="col-4">
-                <button class="btn btn-primary" id="flipBtn">Flip Me</button>
-            </div>
-            <div class="col">This flipped word is <span id="flippedText" class="h4"></span></div>
         </div>
     </div>
 
@@ -73,30 +69,7 @@
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <script>
-        document.getElementById('flipBtn').addEventListener('click', function () {
-
-            let inputWord = document.getElementById('reverseThis').value;
-            let lowerWord = inputWord.toLowerCase();
-            let truncInput = lowerWord.split(' ').join('');
-            let flippedWord = ""
-            for (let loop = inputWord.length - 1; loop >= 0; loop--) {
-                flippedWord += truncInput.charAt(loop);
-            }
-            if (truncInput == flippedWord) {
-                swal('Good Job', 'This is a palindrome!', 'success')
-            }
-            else {
-                swal('Sorry', 'This is not a palindrome!', 'error')
-            }
-
-
-            document.getElementById('flippedText').innerHTML = flippedWord
-
-
-
-        })
-    </script>
+    
 
 
 

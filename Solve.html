@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Coder Foundry MiniSite Template</title>
+    <link rel="shortcut icon" href="Images/favicon.ico">
+    <title>Taco Cat Challenge</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Challenge Name Here</a>
+            <a class="navbar-brand" href="/Index.html">Taco Cat</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,7 +42,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://aduval.netlify.app" target="_blank">Portfolio</a>
-                    </li>                   
+                    </li>
                 </ul>
             </div>
         </div>
@@ -52,13 +52,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">The Exercise</h1>
-                <p class="lead">This page will display your JS exercise</p>
-                <ul class="list-unstyled">
-                    <li>The Javascript Exercise</li>
-                    <li>Is placed on this page</li>
-                </ul>
+                <h1 class="mt-5">Taco Cat</h1>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <input type="text" id="reverseThis" />
+            </div>
+            <div class="col-4">
+                <button class="btn btn-primary" id="flipBtn">Flip Me</button>
+            </div>
+            <div class="col">This flipped word is <span id="flippedText" class="h4"></span></div>
         </div>
     </div>
 
@@ -66,7 +70,32 @@
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <script>
+        document.getElementById('flipBtn').addEventListener('click', function () {
+
+            let inputWord = document.getElementById('reverseThis').value;
+            let lowerWord = inputWord.toLowerCase();
+            let truncInput = lowerWord.split(' ').join('');
+            let flippedWord = ""
+            for (let loop = inputWord.length - 1; loop >= 0; loop--) {
+                flippedWord += truncInput.charAt(loop);
+            }
+            if (truncInput == flippedWord) {
+                swal('Good Job', 'This is a palindrome!', 'success')
+            }
+            else {
+                swal('Sorry', 'This is not a palindrome!', 'error')
+            }
+
+
+            document.getElementById('flippedText').innerHTML = flippedWord
+
+
+
+        })
+    </script>
 </body>
 
 </html>
