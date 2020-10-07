@@ -68,9 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code.html" />
+    <Content Include="Content\prism.css" />
     <Content Include="CustomCSS.css" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Index.html" />
+    <Content Include="Scripts\prism.js" />
     <Content Include="Solve.html" />
     <Content Include="Web.config" />
   </ItemGroup>
