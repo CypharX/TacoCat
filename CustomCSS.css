@@ -1,0 +1,22 @@
+﻿.bodybg {
+    background-color: #7785ac
+}
+
+.gridstyle {
+    background-color: #8c7284;
+    color: #f6f4f3;
+    border: 3px solid black;
+}
+
+.buttonstyle {
+    background-color: #e57a44;
+    color: #f6f4f3;
+}
+
+.outputstyle {
+    text-decoration: underline;
+}
+
+.navstyle {
+    background-color: #1e304a;
+}

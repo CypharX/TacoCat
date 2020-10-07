@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code.html" />
+    <Content Include="CustomCSS.css" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Index.html" />
     <Content Include="Solve.html" />
