@@ -83,7 +83,7 @@
 
             let inputWord = document.getElementById('reverseThis').value;
             let lowerWord = inputWord.toLowerCase();
-            let truncInput = lowerWord.split(' ').join('');
+            let truncInput = lowerWord.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|\s/gi, '') 
             let flippedWord = ""
             for (let loop = inputWord.length - 1; loop >= 0; loop--) {
                 flippedWord += truncInput.charAt(loop);
