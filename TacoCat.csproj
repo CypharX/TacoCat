@@ -71,6 +71,7 @@
     <Content Include="Content\prism.css" />
     <Content Include="CustomCSS.css" />
     <Content Include="Images\favicon.ico" />
+    <Content Include="Images\TacoCat.png" />
     <Content Include="Index.html" />
     <Content Include="Scripts\prism.js" />
     <Content Include="Scripts\Solve.js" />
