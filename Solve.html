@@ -77,46 +77,8 @@
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script>
-        document.getElementById('flipBtn').addEventListener('click', function () {
-
-            let inputWord = document.getElementById('reverseThis').value;
-            let lowerWord = inputWord.toLowerCase();
-            let truncInput = lowerWord.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|\s/gi, '') 
-            let flippedWord = ""
-            for (let loop = inputWord.length - 1; loop >= 0; loop--) {
-                flippedWord += truncInput.charAt(loop);
-            }
-            if (truncInput == flippedWord) {
-                swal('Good Job', 'This is a palindrome!', 'success')
-            }
-            else {
-                swal('Sorry', 'This is not a palindrome!', 'error')
-            }
-
-
-            document.getElementById('flippedText').innerHTML = flippedWord
-
-
-
-        })
-
-        //function keyCheck
-
-
-
-        document.getElementById('reverseThis').addEventListener('keypress', function (evt) {
-            var char = evt.which;
-            if (char >= 97 && char <= 122 || char >= 65 && char <= 90) {
-                return true;
-            }
-            else {
-                evt.preventDefault();
-                return false;
-            }
-        });
-    </script>
+    <script src="Scripts/Solve.js"></script>
+    
 </body>
 
 </html>
