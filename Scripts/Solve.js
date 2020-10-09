@@ -18,15 +18,24 @@ document.getElementById('flipBtn').addEventListener('click', function () {
     //entered a palindrome or not. The sweet alerts use template literals to
     //display the original input.
     if (truncInput == flippedWord) {
-        swal('Good Job', `${inputWord} is a palindrome!`, 'success',)
+        Swal.fire({
+            title: `<span style='color: #F7F0F0' class='h2'>Great Job!<span>`,
+            
+            background: '#1E212B',
+            icon: 'success',
+            html: `<span style='color: #F7F0F0' class='h4'>${inputWord} is a palindrome! <span>`,
+            backdrop: '#048A81',
+            confirmButtonColor: '#048A81',
+            iconColor: '#06D6A0',           
+        })
     }
     else {
-        swal('Sorry', `${inputWord} is not a palindrome!`, 'error')
-    }
-    //Function that sets the innerHTML of the "flippedText" id to our new "flippedWord"
-    //variable. This will display they new word to the user.
-    document.getElementById('flippedText').innerHTML = flippedWord
-})
+            Swal.fire('Sorry', `${inputWord} is not a palindrome!`, 'error')
+        }
+        //Function that sets the innerHTML of the "flippedText" id to our new "flippedWord"
+        //variable. This will display they new word to the user.
+        document.getElementById('flippedText').innerHTML = flippedWord
+    })
 
 //Function that listens for a keypress in the "reverseThis" input box and then
 //ignores all non letter or space characters.
