@@ -20,7 +20,6 @@ document.getElementById('flipBtn').addEventListener('click', function () {
     if (truncInput == flippedWord) {
         Swal.fire({
             title: `<span style='color: #F7F0F0' class='h2'>Great Job!<span>`,
-            
             background: '#1E212B',
             icon: 'success',
             html: `<span style='color: #F7F0F0' class='h4'>${inputWord} is a palindrome! <span>`,
@@ -30,7 +29,15 @@ document.getElementById('flipBtn').addEventListener('click', function () {
         })
     }
     else {
-            Swal.fire('Sorry', `${inputWord} is not a palindrome!`, 'error')
+        Swal.fire({
+            title: `<span style='color: #F7F0F0' class='h2'>Sorry<span>`,
+            background: '#1E212B',
+            icon: 'error',
+            html: `<span style='color: #F7F0F0' class='h4'>${inputWord} is a not palindrome! <span>`,
+            backdrop: '#BF5C5C',
+            confirmButtonColor: '#F27474',
+            
+        })
         }
         //Function that sets the innerHTML of the "flippedText" id to our new "flippedWord"
         //variable. This will display they new word to the user.
